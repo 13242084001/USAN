@@ -1,0 +1,12 @@
+---
+stages:
+- name: 查询混合分配方式列表
+  request:
+    headers:
+      x-token: required
+    method: GET
+    url: http://172.16.130.254:5000/api/v1/domain/{domain_uuid}/diskpool/{pool_id}/hybrid_mode
+  response:
+    status_code: 200
+    strict: false
+test_name: 混合分配方式-查询混合分配方式列表-查询混合分配方式列表

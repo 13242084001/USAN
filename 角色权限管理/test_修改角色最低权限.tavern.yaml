@@ -1,0 +1,19 @@
+---
+stages:
+- name: 修改角色最低权限
+  request:
+    headers:
+      x-token: required
+    json:
+      authorized_roles: required
+      function_auth_id: required
+      function_menu: required
+      function_sub_menu: required
+    method: PUT
+    params:
+      async_mode: optional
+    url: http://172.16.130.254:5000/api/v1/domain/{domain_uuid}/permission/{function_uuid}
+  response:
+    status_code: 200
+    strict: false
+test_name: 角色权限管理-修改角色最低权限-修改角色最低权限

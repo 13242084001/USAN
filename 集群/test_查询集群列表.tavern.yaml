@@ -1,0 +1,12 @@
+---
+stages:
+- name: 查询集群列表
+  request:
+    headers:
+      x-token: required
+    method: GET
+    url: http://172.16.130.254:5000/api/v1/cluster
+  response:
+    status_code: 200
+    strict: false
+test_name: 集群管理-查询集群列表-查询集群列表

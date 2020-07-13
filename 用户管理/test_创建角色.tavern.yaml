@@ -1,0 +1,12 @@
+---
+stages:
+- name: 创建角色
+  request:
+    headers:
+      x-token: required
+    method: POST
+    url: http://172.16.130.254:5000/api/v1/domain/{domain_uuid}/user_roles
+  response:
+    status_code: 200
+    strict: false
+test_name: 用户管理-创建角色-创建角色

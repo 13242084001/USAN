@@ -1,0 +1,17 @@
+---
+stages:
+- name: 查询新节点列表
+  request:
+    headers:
+      x-token: required
+    method: GET
+    params:
+      node_ip_range_end: required
+      node_ip_range_start: required
+      password: required
+      username: required
+    url: http://172.16.130.254:5000/api/v1/node/{node_uuid}/new_nodes
+  response:
+    status_code: 200
+    strict: false
+test_name: 新节点信息-查询新节点列表-查询新节点列表

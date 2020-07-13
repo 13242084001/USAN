@@ -1,0 +1,12 @@
+---
+stages:
+- name: 修改成员磁盘状态
+  request:
+    headers:
+      x-token: required
+    method: PATCH
+    url: http://172.16.130.254:5000/api/v1/domain/{domain_uuid}/pooldisk/{disk_id}
+  response:
+    status_code: 200
+    strict: false
+test_name: 成员磁盘-修改成员磁盘状态-修改成员磁盘状态

@@ -1,0 +1,15 @@
+---
+stages:
+- name: 删除菜单权限
+  request:
+    headers:
+      x-token: required
+    method: DELETE
+    params:
+      async_mode: optional
+      permission_uuid: required
+    url: http://172.16.130.254:5000/api/v1/domain/{domain_uuid}/permission
+  response:
+    status_code: 200
+    strict: false
+test_name: 角色权限管理-删除菜单权限-删除菜单权限

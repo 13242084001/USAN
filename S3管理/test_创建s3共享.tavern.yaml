@@ -1,0 +1,16 @@
+---
+stages:
+- name: 创建s3共享
+  request:
+    headers:
+      x-token: required
+    json:
+      s3_desc: required
+      s3_name: required
+      s3_path: required
+    method: POST
+    url: http://172.16.130.254:5000/api/v1/s3
+  response:
+    status_code: 200
+    strict: false
+test_name: S3共享-创建S3共享-创建s3共享

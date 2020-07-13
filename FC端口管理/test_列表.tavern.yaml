@@ -1,0 +1,10 @@
+---
+stages:
+- name: </b><br/>列表
+  request:
+    method: GET
+    url: http://172.16.130.254:5000/api/v1/domain/{domain_uuid}/fc_port
+  response:
+    status_code: 200
+    strict: false
+test_name: 服务管理-分布式块设备-FiberChannel-Fc端口管理-列表

@@ -1,0 +1,23 @@
+---
+stages:
+- name: '---'
+  request:
+    headers:
+      x-token: required
+    json:
+      create_time: required
+      email_onoff: required
+      group_uuid: required
+      member_count: required
+      members: required
+      message_onoff: required
+      no_change: required
+      sender_email: required
+      sender_mobile: required
+      snmp_onoff: required
+    method: PUT
+    url: http://172.16.130.254:5000/api/v1/domain/{domain_uuid}/alarm_user_groups/{alarm_user_group_uuid}
+  response:
+    status_code: 200
+    strict: false
+test_name: 告警管理-修改告警组信息

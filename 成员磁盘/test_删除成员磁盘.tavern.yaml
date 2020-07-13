@@ -1,0 +1,14 @@
+---
+stages:
+- name: и╬ЁЩЁит╠╢еел
+  request:
+    headers:
+      x-token: required
+    method: DELETE
+    params:
+      force: optional
+    url: http://172.16.130.254:5000/api/v1/domain/{domain_uuid}/pooldisk/{disk_id}
+  response:
+    status_code: 200
+    strict: false
+test_name: Ёит╠╢еел-и╬ЁЩЁит╠╢еел-и╬ЁЩЁит╠╢еел

@@ -1,0 +1,12 @@
+---
+stages:
+- name: 查询磁盘分组类型列表
+  request:
+    headers:
+      x-token: required
+    method: GET
+    url: http://172.16.130.254:5000/api/v1/domain/{domain_uuid}/diskpool_mode
+  response:
+    status_code: 200
+    strict: false
+test_name: 磁盘分组类型-查询磁盘分组类型列表-查询磁盘分组类型列表

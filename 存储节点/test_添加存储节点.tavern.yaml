@@ -1,0 +1,17 @@
+---
+stages:
+- name: 添加存储节点
+  request:
+    headers:
+      x-token: required
+    json:
+      node_ip: required
+      password: required
+      pd_name: required
+      username: required
+    method: POST
+    url: http://172.16.130.254:5000/api/v1/domain/{domain_uuid}/node
+  response:
+    status_code: 200
+    strict: false
+test_name: 存储节点-添加存储节点-添加存储节点

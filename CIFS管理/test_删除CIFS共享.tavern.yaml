@@ -1,0 +1,12 @@
+---
+stages:
+- name: É¾³ıCIFS¹²Ïí
+  request:
+    headers:
+      x-token: required
+    method: DELETE
+    url: http://172.16.130.254:5000/api/v1/cifs/{cifs_uuid}
+  response:
+    status_code: 200
+    strict: false
+test_name: Cifs¹²Ïí-É¾³ıCifs¹²Ïí-É¾³ıCIFS¹²Ïí

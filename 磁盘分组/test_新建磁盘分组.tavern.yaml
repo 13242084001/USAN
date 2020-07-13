@@ -1,0 +1,15 @@
+---
+stages:
+- name: 新建磁盘分组
+  request:
+    headers:
+      x-token: required
+    json:
+      pool_chunk: required
+      pool_name: required
+    method: POST
+    url: http://172.16.130.254:5000/api/v1/domain/{domain_uuid}/diskpool
+  response:
+    status_code: 200
+    strict: false
+test_name: 磁盘分组-新建磁盘分组-新建磁盘分组

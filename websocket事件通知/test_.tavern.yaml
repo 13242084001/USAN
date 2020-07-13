@@ -1,0 +1,10 @@
+---
+stages:
+- name: '---'
+  request:
+    method: GET
+    url: http://172.16.130.254:5000/api/v1/ws
+  response:
+    status_code: 200
+    strict: false
+test_name: Get

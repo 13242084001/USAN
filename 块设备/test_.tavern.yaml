@@ -1,0 +1,15 @@
+---
+stages:
+- name: '---'
+  request:
+    headers:
+      x-token: required
+    json:
+      description: required
+      iqn: required
+    method: DELETE
+    url: http://172.16.130.254:5000/api/v1/domain/{domain_uuid}/iscsi_initiators
+  response:
+    status_code: 200
+    strict: false
+test_name: Iscsi块设备-删除发起端

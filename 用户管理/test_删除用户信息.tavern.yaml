@@ -1,0 +1,14 @@
+---
+stages:
+- name: 删除用户信息
+  request:
+    headers:
+      x-token: required
+    method: DELETE
+    params:
+      async_mode: optional
+    url: http://172.16.130.254:5000/api/v1/domain/{domain_uuid}/user/{user_uuid}
+  response:
+    status_code: 200
+    strict: false
+test_name: 用户管理-删除用户-删除用户信息

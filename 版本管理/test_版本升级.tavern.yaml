@@ -1,0 +1,16 @@
+---
+stages:
+- name: 版本升级
+  request:
+    headers:
+      x-token: required
+    json:
+      file: required
+    method: POST
+    params:
+      async_mode: optional
+    url: http://172.16.130.254:5000/api/v1/domain/{domain_uuid}/updates
+  response:
+    status_code: 200
+    strict: false
+test_name: 版本管理-版本升级-版本升级

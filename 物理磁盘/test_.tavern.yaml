@@ -1,0 +1,14 @@
+---
+stages:
+- name: '---'
+  request:
+    headers:
+      x-token: required
+    method: GET
+    params:
+      pool_name: optional
+    url: http://172.16.130.254:5000/api/v1/domain/{domain_uuid}/phydisk
+  response:
+    status_code: 200
+    strict: false
+test_name: 物理磁盘-查询存储节点物理磁盘列表

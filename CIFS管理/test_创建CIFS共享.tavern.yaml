@@ -1,0 +1,14 @@
+---
+stages:
+- name: 创建CIFS共享
+  request:
+    json:
+      cifs_desc: required
+      cifs_name: required
+      cifs_path: required
+    method: POST
+    url: http://172.16.130.254:5000/api/v1/cifs
+  response:
+    status_code: 200
+    strict: false
+test_name: Cifs共享-创建Cifs共享-创建CIFS共享

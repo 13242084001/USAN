@@ -1,0 +1,10 @@
+---
+stages:
+- name: </b><br/>创建，修改，均使用POST，后台的区别是post数据中是否带uuid。
+  request:
+    method: POST
+    url: http://172.16.130.254:5000/api/v1/domain/{domain_uuid}/fc_mapping_group
+  response:
+    status_code: 200
+    strict: false
+test_name: 服务管理-分布式块设备-FiberChannel-Fc映射组管理-创建修改均使用POST后台的区别是post数据中是否带uuid

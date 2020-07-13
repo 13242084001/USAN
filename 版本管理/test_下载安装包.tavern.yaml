@@ -1,0 +1,14 @@
+---
+stages:
+- name: 下载安装包
+  request:
+    headers:
+      x-token: required
+    method: PATCH
+    params:
+      async_mode: optional
+    url: http://172.16.130.254:5000/api/v1/domain/{domain_uuid}/update_packages/{download_version}
+  response:
+    status_code: 200
+    strict: false
+test_name: 版本管理-下载安装包-下载安装包

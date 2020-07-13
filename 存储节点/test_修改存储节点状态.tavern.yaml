@@ -1,0 +1,14 @@
+---
+stages:
+- name: ÐÞ¸Ä´æ´¢½Úµã×´Ì¬
+  request:
+    headers:
+      x-token: required
+    json:
+      state: required
+    method: PATCH
+    url: http://172.16.130.254:5000/api/v1/domain/{domain_uuid}/node/{node_id}
+  response:
+    status_code: 200
+    strict: false
+test_name: ´æ´¢½Úµã-ÐÞ¸Ä´æ´¢½Úµã×´Ì¬-ÐÞ¸Ä´æ´¢½Úµã×´Ì¬

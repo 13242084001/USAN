@@ -1,0 +1,13 @@
+---
+stages:
+- name: 登录到后台系统
+  request:
+    json:
+      password: required
+      username: required
+    method: POST
+    url: http://172.16.130.254:5000/api/v1/auth/login
+  response:
+    status_code: 200
+    strict: false
+test_name: 登录系统-登录到后台系统

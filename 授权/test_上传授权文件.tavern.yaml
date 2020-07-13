@@ -1,0 +1,14 @@
+---
+stages:
+- name: 上传授权文件
+  request:
+    headers:
+      x-token: required
+    json:
+      license_file: required
+    method: POST
+    url: http://172.16.130.254:5000/api/v1/license/upload
+  response:
+    status_code: 200
+    strict: false
+test_name: 授权-上传授权文件-上传授权文件

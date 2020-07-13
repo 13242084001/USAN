@@ -1,0 +1,10 @@
+---
+stages:
+- name: 测试API接口网络是否正常
+  request:
+    method: GET
+    url: http://172.16.130.254:5000/api/v1/test
+  response:
+    status_code: 200
+    strict: false
+test_name: 网络测试-测试API接口网络是否正常

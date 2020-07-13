@@ -1,0 +1,12 @@
+---
+stages:
+- name: 查询用户列表
+  request:
+    headers:
+      x-token: required
+    method: GET
+    url: http://172.16.130.254:5000/api/v1/domain/{domain_uuid}/user_group
+  response:
+    status_code: 200
+    strict: false
+test_name: 用户组管理-查询用户组列表-查询用户列表

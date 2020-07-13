@@ -1,0 +1,12 @@
+---
+stages:
+- name: 删除磁盘分组
+  request:
+    headers:
+      x-token: required
+    method: DELETE
+    url: http://172.16.130.254:5000/api/v1/domain/{domain_uuid}/diskpool/{pool_id}
+  response:
+    status_code: 200
+    strict: false
+test_name: 磁盘分组-删除磁盘分组-删除磁盘分组

@@ -1,0 +1,12 @@
+---
+stages:
+- name: 查询CIFS共享列表
+  request:
+    headers:
+      x-token: required
+    method: GET
+    url: http://172.16.130.254:5000/api/v1/cifs
+  response:
+    status_code: 200
+    strict: false
+test_name: Cifs共享-查询Cifs共享列表-查询CIFS共享列表

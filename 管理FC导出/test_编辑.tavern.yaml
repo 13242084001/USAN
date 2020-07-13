@@ -1,0 +1,12 @@
+---
+stages:
+- name: </b><br/>编辑
+  request:
+    headers:
+      x-token: required
+    method: PUT
+    url: http://172.16.130.254:5000/api/v1/domain/{domain_uuid}/fc_export/{export_uuid}
+  response:
+    status_code: 200
+    strict: false
+test_name: 服务管理-分布式块设备-FiberChannel-管理Fc导出-编辑

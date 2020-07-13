@@ -1,0 +1,12 @@
+---
+stages:
+- name: 查询任务详情
+  request:
+    headers:
+      x-token: required
+    method: GET
+    url: http://172.16.130.254:5000/api/v1/task/{task_id}
+  response:
+    status_code: 200
+    strict: false
+test_name: 任务管理-查询任务详情-查询任务详情

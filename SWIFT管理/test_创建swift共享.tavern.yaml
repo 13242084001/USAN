@@ -1,0 +1,14 @@
+---
+stages:
+- name: 创建swift共享
+  request:
+    json:
+      swift_desc: required
+      swift_name: required
+      swift_path: required
+    method: POST
+    url: http://172.16.130.254:5000/api/v1/swift
+  response:
+    status_code: 200
+    strict: false
+test_name: Swift共享-创建Swift共享-创建swift共享
